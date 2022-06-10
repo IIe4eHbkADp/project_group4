@@ -32,32 +32,6 @@
   background: #fafafa;
 }
 
-.reviews-lines {
-  width: 180px;
-  height: 217px;
-  background-image: repeating-linear-gradient(
-    0deg,
-    #0000 1.5px 31px,
-    #e1e1e1 1px 32px
-  );
-  position: absolute;
-  top: 71px;
-  left: 50%;
-  transform: translate(-50%);
-}
-
-// .reviews-lines::before {
-//   content: '❜❜';
-//   font-size: 100px;
-//   letter-spacing: -3px;
-//   color: #e1e1e1;
-//   position: absolute;
-//   top: -65px;
-//   left: 8px;
-//
-//
-// }
-
 .reviews-text {
   position: relative;
   width: 157px;
@@ -73,13 +47,101 @@
   color: #000000;
 }
 
-.reviews-lines::before {
-  content: '';
-  background-size: 50px 50px;
-  left: 0px;
-  top: 50px;
-  width: 50px;
-  height: 50px;
+.reviews-lines {
+  width: 180px;
+  height: 217px;
+  background-image: repeating-linear-gradient(
+    0deg,
+    #0000 1.5px 31px,
+    #e1e1e1 1px 32px
+  );
   position: absolute;
-  background-image: src('./images/mobile/customer_reviews/quotes-m1x.png');
+  top: 71px;
+  left: 50%;
+  transform: translate(-50%);
+  display: block;
 }
+
+.reviews-lines::before {
+  content: '❜❜';
+  font-size: 100px;
+  letter-spacing: -3px;
+  color: #e1e1e1;
+  position: absolute;
+  top: -65px;
+  left: 8px;
+}
+
+// .reviews-lines::before {
+//   content: '';
+//   background-size: contain;
+//   left: 0px;
+//   top: 50px;
+//   width: 54px;
+//   height: 40px;
+//   position: absolute;
+//   background-image: url('./src/images/mobile/customer_reviews/quotes-m1x.png');
+// }
+
+// .reviews-lines::before {
+//   content: url('./src/images/mobile/customer_reviews/quotes-m1x.png');
+//   background-size: contain;
+//   left: 0px;
+//   top: 50px;
+//   width: 54px;
+//   height: 40px;
+//   position: absolute;
+// }
+
+.review--padding {
+  padding-top: 16px;
+}
+.reviews-point {
+  position: relative;
+}
+
+.review-name {
+  font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 1.86;
+text-align: center;
+color: #000000;
+padding-top: 16px;
+}
+
+.reviews-point__one::before {
+  content: '';
+  position: absolute;  
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color:  #C7133E;
+  background-repeat: repeat-x;
+  top: 0px;
+  left: calc(50% - 14px);
+}
+
+.reviews-point__two::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color:  #C7133E;
+  top: 0px;
+  left: 50%;
+}
+
+.reviews-point__three::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color:  #C7133E;
+  top: 0px;
+  left: calc(50% + 14px);
+}
+
