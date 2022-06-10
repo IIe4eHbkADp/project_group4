@@ -3,36 +3,52 @@
   padding-right: 20px;
   padding-left: 20px;
   margin: 0 auto;
-}
-
-.visibility-hidden {
-  position: absolute;
-  visibility: hidden;
-  width: 1px;
-  height: 1px;
-  margin-bottom: -1px;
-  padding-bottom: 0;
+  @media screen and (min-width: 768px) {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
 }
 
 .reviews {
   padding-top: 80px;
   padding-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+  padding-top: 120px;
+  padding-bottom: 16px;
+  }
+  &__foto {
+    width: 85px;
+    height: 85px;
+    margin: 0px auto;
+  }
 }
 
-.reviews-foto {
-  width: 85px;
-  height: 85px;
-  margin: 0px auto;
-}
-
-.reviews-area {
+.reviews--area {
   position: relative;
   width: 100%;
   height: 308px;
-  background: #fafafa;
+  background: hsla(0, 0%, 98%);
+  @media screen and (min-width: 768px) {
+    width: 620px;
+    height: 164px;
+    margin: 0 auto;
+    background: hsla(0, 0%, 98%, 0.404);
+  }
+  @media screen and (min-width: 1280px) {
+    width: 1034px;
+    height: 138px;
+    background: hsla(0, 0%, 98%);
+  }
 }
 
-.reviews-text {
+.reviews--text {
   position: relative;
   width: 157px;
   margin-left: calc(50% + 7px);
@@ -45,9 +61,22 @@
   line-height: 2.55;
   text-align: center;
   color: #000000;
+  @media screen and (min-width: 768px) {
+    width: 515px;
+    padding-top: 37px;
+    font-size: 14px;
+    line-height: 2.16;
+    letter-spacing: 0.04em;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 750px;
+    padding-top: 47px;
+    font-size: 16px;
+    line-height: 1.86;
+  }
 }
 
-.reviews-lines {
+.reviews--lines {
   width: 180px;
   height: 217px;
   background-image: repeating-linear-gradient(
@@ -60,9 +89,19 @@
   left: 50%;
   transform: translate(-50%);
   display: block;
+  @media screen and (min-width: 768px) {
+    width: 608px;
+    height: 88px;
+    top: 40px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 822px;
+    height: 45px;
+    top: 65px;
+  }
 }
 
-.reviews-lines::before {
+.reviews--lines::before {
   content: '❜❜';
   font-size: 100px;
   letter-spacing: -3px;
@@ -70,6 +109,16 @@
   position: absolute;
   top: -65px;
   left: 8px;
+  @media screen and (min-width: 768px) {
+    font-size: 105px;
+    top: -42px;
+    left: 15px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 100px;
+    top: -53px;
+    left: 7px;
+  }
 }
 
 // .reviews-lines::before {
@@ -93,55 +142,52 @@
 //   position: absolute;
 // }
 
-.review--padding {
+.review-padding {
   padding-top: 16px;
+  @media screen and (min-width: 768px) {
+    padding-top: 4px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-top: 16px;
+  }
 }
+
 .reviews-point {
   position: relative;
+  &__one::before,
+  &__two::before,
+  &__three::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #c7133e;
+    background-repeat: repeat-x;
+    top: 0px;
+    left: calc(50% - 14px);
+  }
+  &__two::before {
+    left: 50%;
+  }
+  &__three::before {
+    left: calc(50% + 14px);
+  }
 }
 
-.review-name {
+.review__name {
   font-family: 'DM Sans';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 1.86;
-text-align: center;
-color: #000000;
-padding-top: 16px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.86;
+  text-align: center;
+  color: #000000;
+  padding-top: 20px;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+  }
 }
-
-.reviews-point__one::before {
-  content: '';
-  position: absolute;  
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color:  #C7133E;
-  background-repeat: repeat-x;
-  top: 0px;
-  left: calc(50% - 14px);
-}
-
-.reviews-point__two::before {
-  content: '';
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color:  #C7133E;
-  top: 0px;
-  left: 50%;
-}
-
-.reviews-point__three::before {
-  content: '';
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color:  #C7133E;
-  top: 0px;
-  left: calc(50% + 14px);
-}
-
