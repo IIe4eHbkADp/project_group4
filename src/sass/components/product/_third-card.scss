@@ -1,0 +1,46 @@
+.section-product__item--green {
+  background-color: $shake-bgc;
+
+  & .section-product__subtitle::before {
+    content: '';
+    position: absolute;
+    bottom: 43px;
+    right: 50%;
+    transform: translateX(50%);
+    display: inline-block;
+    width: 280px;
+    height: 280px;
+    background-image: url(../images/mobile/milkshake-mob.png);
+    background-position: center;
+    background-size: cover;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/mobile/milkshake-mob-2x.png);
+    }
+
+    @media screen and (min-width: 768px) {
+      bottom: 55px;
+      width: 224px;
+      height: 224px;
+      background-image: url(../images/tablet/milkshake-tab.png);
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/tablet/milkshake-tab-2x.png);
+      }
+    }
+
+    @media screen and (min-width: 1280px) {
+      bottom: 66px;
+      width: 394px;
+      height: 394px;
+      background-image: url(../images/desktop/milkshake.png);
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/desktop/milkshake-2x.png);
+      }
+    }
+  }
+}
