@@ -2,45 +2,51 @@
   <div class="container">
     <p class="about__label">tradition and love</p>
     <h2 class="about__header">how it’s made?</h2>
-    <picture>
-      <source
-        srcset="
-          ./images/desktop/cow-min.png    1x,
-          ./images/desktop/cow-2x-min.png 2x
-        "
-        media="(min-width:1200px)"
-      />
-      <source
-        srcset="
-          ./images/tablet/cow-tablet-min.png    1x,
-          ./images/tablet/cow-tablet-2x-min.png 2x
-        "
-        media="(min-width:768px)"
-      />
-      <source
-        srcset="
-          ./images/mobile/cow-mob-min.png    1x,
-          ./images/mobile/cow-mob-2x-min.png 2x
-        "
-        media="(min-width:320px)"
-      />
-      <img
-        src="./images/desktop/cow-min.png"
-        alt="cow and milk"
-        class="about__img"
-      />
-    </picture>
-    <p class="about__top">
-      Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
-      cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo
-      fringilla.
-    </p>
-    <p class="about__bottom">
-      Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
-      Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
-      suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
-      tincidunt. Aliquam erat volutpat. Aenean accumsan.
-    </p>
-    <button type="button" class="about__btn">Read more</button>
+    <div class="about-content">
+      <picture>
+        <source
+          srcset="
+            ./images/desktop/cow-min.png    1x,
+            ./images/desktop/cow-2x-min.png 2x
+          "
+          media="(min-width:1200px)"
+        />
+        <source
+          srcset="
+            ./images/tablet/cow-tablet-min.png    1x,
+            ./images/tablet/cow-tablet-2x-min.png 2x
+          "
+          media="(min-width:768px)"
+        />
+        <source
+          srcset="
+            ./images/mobile/cow-mob-min.png    1x,
+            ./images/mobile/cow-mob-2x-min.png 2x
+          "
+          media="(min-width:320px)"
+        />
+        <img
+          src="./images/desktop/cow-min.png"
+          alt="cow and milk"
+          class="about-content__img"
+        />
+      </picture>
+      <div class="about-text">
+        <p class="about-text__top">
+          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
+          cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at
+          justo fringilla.
+        </p>
+        <p class="about-text__bottom">
+          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
+          Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
+          suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
+          tincidunt. Aliquam erat volutpat. Aenean accumsan.
+        </p>
+        <button type="button" class="about__btn">
+          <span class="btn-text">Read more</span>&#10095;
+        </button>
+      </div>
+    </div>
   </div>
 </section>
