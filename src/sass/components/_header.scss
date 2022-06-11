@@ -68,7 +68,28 @@
 }
 
 .header__btn {
-  display: none;
+
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        border-radius: 22px;
+        background-color: $main-color;
+        font-family: $main-font;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.31;
+        color: $accent-color;
+        padding: 17px 37px;
+        align-items: center;
+        transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: ease-in-out;
+
+        &:hover, &:focus {
+            background-color: $hover-btn-color;
+        }
+    }
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -89,6 +110,7 @@
   height: 8px;
   margin-left: 12px;
 }
+
 
 // hero
 
@@ -640,3 +662,4 @@
     color: $accent-color;
   }
 }
+

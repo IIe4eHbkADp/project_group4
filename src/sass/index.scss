@@ -4,10 +4,21 @@
 @import './utils/visibility-hidden';
 @import './base/container';
 @import './components/header';
-@import './components/product';
+@import './components/product/section-general';
+@import './components/product/section-header';
+@import './components/product/cards-list-general';
+@import './components/product/cards-components';
+@import './components/product/firs-card';
+@import './components/product/second-card';
+@import './components/product/third-card';
 @import './components/about';
 @import './components/advantage';
 @import './components/gallery';
 @import './components/customer_reviews';
 @import './components/contacts';
 @import './components/footer';
+
+@import './components/header-mob-menu';
+@import './components/hero';
+@import './components/header-buy-modal';
+
