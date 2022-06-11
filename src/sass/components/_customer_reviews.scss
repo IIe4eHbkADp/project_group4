@@ -20,8 +20,8 @@
     padding-bottom: 20px;
   }
   @media screen and (min-width: 1280px) {
-  padding-top: 120px;
-  padding-bottom: 16px;
+    padding-top: 120px;
+    padding-bottom: 16px;
   }
   &__foto {
     width: 85px;
@@ -30,7 +30,7 @@
   }
 }
 
-.reviews--area {
+.reviews-area {
   position: relative;
   width: 100%;
   height: 308px;
@@ -48,7 +48,7 @@
   }
 }
 
-.reviews--text {
+.reviews-area__text {
   position: relative;
   width: 157px;
   margin-left: calc(50% + 7px);
@@ -76,7 +76,7 @@
   }
 }
 
-.reviews--lines {
+.reviews-area__lines {
   width: 180px;
   height: 217px;
   background-image: repeating-linear-gradient(
@@ -101,48 +101,30 @@
   }
 }
 
-.reviews--lines::before {
-  content: '❜❜';
-  font-size: 100px;
-  letter-spacing: -3px;
-  color: #e1e1e1;
+.reviews-area__lines::before {
+  content: '';
+  background-size: contain;
+  top: -42px;
+  left: 7px;
+  width: 54px;
+  height: 40px;
   position: absolute;
-  top: -65px;
-  left: 8px;
+  background-image: url('/src/images/mobile/customer_reviews/quotes_m2x.png');
   @media screen and (min-width: 768px) {
-    font-size: 105px;
-    top: -42px;
-    left: 15px;
+    background-image: url('/src/images/tablet/quotes-t2x.png');
+    width: 60px;
+    top: -20px;
+    left: 8px;
   }
   @media screen and (min-width: 1280px) {
-    font-size: 100px;
-    top: -53px;
-    left: 7px;
+    background-image: url('/src/images/mobile/customer_reviews/quotes_m2x.png');
+    width: 54px;
+    top: -32px;
+    left: 6px;
   }
 }
 
-// .reviews-lines::before {
-//   content: '';
-//   background-size: contain;
-//   left: 0px;
-//   top: 50px;
-//   width: 54px;
-//   height: 40px;
-//   position: absolute;
-//   background-image: url('./src/images/mobile/customer_reviews/quotes-m1x.png');
-// }
-
-// .reviews-lines::before {
-//   content: url('./src/images/mobile/customer_reviews/quotes-m1x.png');
-//   background-size: contain;
-//   left: 0px;
-//   top: 50px;
-//   width: 54px;
-//   height: 40px;
-//   position: absolute;
-// }
-
-.review-padding {
+.reviews-name {
   padding-top: 16px;
   @media screen and (min-width: 768px) {
     padding-top: 4px;
@@ -152,11 +134,11 @@
   }
 }
 
-.reviews-point {
+.reviews-name__point {
   position: relative;
-  &__one::before,
-  &__two::before,
-  &__three::before {
+  &-one::before,
+  &-two::before,
+  &-three::before {
     content: '';
     position: absolute;
     width: 4px;
@@ -167,15 +149,15 @@
     top: 0px;
     left: calc(50% - 14px);
   }
-  &__two::before {
+  &-two::before {
     left: 50%;
   }
-  &__three::before {
+  &-three::before {
     left: calc(50% + 14px);
   }
 }
 
-.review__name {
+.reviews-name__name {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 500;
