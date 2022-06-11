@@ -3,6 +3,7 @@
 .backdrop,
 .backdrop-mob {
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     width: 100%;
@@ -22,7 +23,7 @@
 
 .buy-modal {
     position: absolute;
-    width: 400px;
+    width: 300px;
     height: 500px;
     top: 50%;
     left: 50%;
@@ -33,10 +34,16 @@
     align-items: center;
     overflow: hidden;
 
-    @media screen and (min-width: 1280px) {
-        width: 500px;
+    @media screen and (min-width: 768px) {
+        width: 400px;
         height: 600px;
         padding: 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 500px;
+        height: 700px;
+        padding: 50px;
     }
 }
 
