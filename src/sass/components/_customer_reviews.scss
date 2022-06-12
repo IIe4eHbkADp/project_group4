@@ -173,3 +173,38 @@
     font-size: 20px;
   }
 }
+
+// ______________________________ Slideshow container _____________________________
+.slideshow-container {
+  position: relative;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding-top: 16px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 7px;
+  background-color: #D9D9D9;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:active {
+  height: 12px;
+  width: 12px;
+  border-radius: 0%;
+  background-image: url('/src/images/mobile/customer_reviews/House-icon-2x.png');
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-color: transparent;
+  display: inline-block;
+}
