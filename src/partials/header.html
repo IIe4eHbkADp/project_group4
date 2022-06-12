@@ -1,0 +1,246 @@
+<div class="first-page">
+    <div class="hero-img__container container">
+        <div class="hero__circle"></div>
+        <picture class="hero-img__icecream">
+            <source
+                srcset="./images/desktop/icecream-min.png 1x, ./images/desktop/icecream-2x-min.png 2x"
+                media="(min-width:1280px)">
+            <source
+                srcset="./images/tablet/icecream-tablet-min.png 1x, ./images/tablet/icecream-tablet-2x-min.png 2x"
+                media="(min-width:768px)">
+            <source
+                srcset="./images/mobile/icecream-mob-min.png 1x, ./images/mobile/icecream-mob-2x-min.png 2x"
+                media="(min-width:320px)">
+            <img src="./images/desktop/icecream-min.png" alt="icecream">
+        </picture>
+    </div>
+
+<!-- HEADER -->
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo__link">
+                <picture class="logo">
+                    <source srcset="./images/logo-min.png 1x, ./images/logo-2x-min.png 2x">
+                    <img src="./images/logo-min.png" alt="logo">
+                </picture>
+            </a>
+            <button class="js-open-menu" aria-expanded="false">
+                <svg class="open-menu__icon">
+                    <use href="./images/icons.svg#icon-Burger"></use>
+                </svg>
+            </button>
+            <div class="js-menu-container">
+                <button class="js-close-menu">
+                    <svg class="close-menu__icon">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <button class="mob-btn" data-modal-mob-open>Buy now
+                    <svg class="mob-btn__icon">
+                        <use href="./images/icons.svg#icon-arrow"></use>
+                    </svg>
+                </button>
+                <ul class="mob-menu">
+                    <li class="mob-menu__item"><a href="index.html" class="mob-menu__link">Home</a></li>
+                    <li class="mob-menu__item"><a href="#about" class="mob-menu__link">About us</a></li>
+                    <li class="mob-menu__item"><a href="#about" class="mob-menu__link">How it’s made?</a></li>
+                    <li class="mob-menu__item"><a href="#products" class="mob-menu__link">Our products</a></li>
+                    <li class="mob-menu__item"><a href="#contacts" class="mob-menu__link">Contact</a></li>
+                </ul>
+            </div>
+            <ul class="header-menu">
+                <li class="header-menu__item"><a href="" class="header-menu__link">Home</a></li>
+                <li class="header-menu__item"><a href="#about" class="header-menu__link">About us</a></li>
+                <li class="header-menu__item"><a href="#about" class="header-menu__link">How it’s made?</a></li>
+                <li class="header-menu__item"><a href="#products" class="header-menu__link">Our products</a></li>
+                <li class="header-menu__item"><a href="#contacts" class="header-menu__link">Contact</a></li>
+            </ul>
+            <button class="header__btn" data-modal-open>Buy now
+                <svg class="Header_btn__icon">
+                    <use href="./images/icons.svg#icon-arrow"></use>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+<!-- HERO -->
+
+    <section class="hero">
+        <div class="hero__container">
+            <h1 class="hero__top-text">ice cream <br> made with <br> <span
+                    class="hero__top-text hero__top-text--accent">passion</span></h1>
+            <ul class="hero-btn-list">
+                <li class="hero-btn-list__item"><button type="button" name="#products"
+                        class="hero-btn-list__btn hero-btn-list__btn--dark">Products</button></li>
+                <li class="hero-btn-list__item"><button type="button" name="#about"
+                        class="hero-btn-list__btn hero-btn-list__btn--light">How it’s
+                        made?</button>
+                </li>
+            </ul>
+            <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et</p>
+            <ul class="hero-number">
+                <li class="hero-number__item">
+                    <p class="hero-number__figure">16</p>
+                    <p class="hero-number__position">cafes</p>
+                </li>
+                <li class="hero-number__item">
+                    <p class="hero-number__figure">23</p>
+                    <p class="hero-number__position">food trucks</p>
+                </li>
+            </ul>
+            <a href="" class="hero-img__link">
+                <picture class="hero-img__arrow-right">
+                    <source
+                        srcset="./images/desktop/arrow-min.png 1x, ./images/desktop/arrow-2x-min.png 2x"
+                        media="(min-width: 1280px)">
+                    <source
+                        srcset="./images/tablet/arrow-right-tablet-min.png 1x, ./images/tablet/arrow-right-tablet-2x-min.png 2x"
+                        media="(min-width: 768px)">
+                    <img src="./images/desktop/arrow-right-min.png" alt="icecream">
+                </picture>
+            </a>
+            <picture class="hero-img__milk">
+                <source
+                    srcset="./images/desktop/milk-min.png 1x, ./images/desktop/milk-2x-min.png 2x"
+                    media="(min-width: 1280px)">
+                <source
+                    srcset="./images/tablet/milk-tablet-min.png 1x, ./images/tablet/milk-tablet-2x-min.png 2x"
+                    media="(min-width: 768px)">
+                <img src="./images/desktop/milk-min.png" alt="icecream">
+            </picture>
+            <picture class="hero-img__tasty">
+                <source
+                    srcset="./images/desktop/tasty-min.png 1x, ./images/desktop/tasty-2x-min.png 2x"
+                    media="(min-width: 1280px)">
+                <source
+                    srcset="./images/tablet/tasty-tablet-min.png 1x, ./images/tablet/tasty-tablet-2x-min.png 2x"
+                    media="(min-width: 768px)">
+                <img src="./images/desktop/tasty-min.png" alt="icecream">
+            </picture>
+        </div>
+    </section>
+</div>
+
+<!-- Modal -->
+
+<div class="backdrop is-hidden" data-modal>
+    <div class="buy-modal">
+        <button class="buy-modal__close-btn" data-modal-close>
+            <svg class="close-btn__icon">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        <form class="buy-form">
+            <ul class="buy-form-list">
+                <li class="buy-form-list__item"><label class="buy-form-list__label">Name<input type="text"
+                            class="buy-form-list__input"></label></li>
+                <li class="buy-form-list__item"><label class="buy-form-list__label">E-mail<input type="email"
+                            class="buy-form-list__input"></label></li>
+            </ul>
+        </form>
+        <ul class="buy-modal-list">
+            <li class="buy-modal-list__item">
+                <details class="buy-modal-list__details">
+                    <summary class="buy-modal-list__head">IceCream</summary>
+                    <ul class="buy-product">
+                        <li class="buy-product__item">Strawberry</li>
+                        <li class="buy-product__item">Chokolate</li>
+                        <li class="buy-product__item">Vanile</li>
+                        <li class="buy-product__item">Lemon</li>
+                        <li class="buy-product__item">Orange</li>
+                    </ul>
+                </details>
+            </li>
+            <li class="buy-modal-list__item">
+                <details class="buy-modal-list__details">
+                    <summary class="buy-modal-list__head">Coffe</summary>
+                    <ul class="buy-product">
+                        <li class="buy-product__item">Latte</li>
+                        <li class="buy-product__item">Americano</li>
+                        <li class="buy-product__item">Espresso</li>
+                        <li class="buy-product__item">Matcha</li>
+                        <li class="buy-product__item">Cappuccino</li>
+                    </ul>
+                </details>
+            </li>
+            <li class="buy-modal-list__item">
+                <details class="buy-modal-list__details">
+                    <summary class="buy-modal-list__head">Milkshakes</summary>
+                    <ul class="buy-product">
+                        <li class="buy-product__item">Chokolate</li>
+                        <li class="buy-product__item">Mint</li>
+                        <li class="buy-product__item">Coconut</li>
+                        <li class="buy-product__item">Raspberry</li>
+                        <li class="buy-product__item">Strawberry</li>
+                    </ul>
+                </details>
+            </li>
+        </ul>
+        <button type="submit" class="buy-modal__btn">buy</button>
+    </div>
+</div>
+
+<!-- Mobile modal -->
+
+<div class="backdrop-mob is-hidden" data-mob-modal>
+    <div class="buy-mob-modal">
+        <button class="buy-modal__close-btn" data-modal-mob-close>
+            <svg class="close-btn__icon">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        <form class="buy-form">
+            <ul class="buy-form-list">
+                <li class="buy-form-list__item"><label class="buy-form-list__label">Name<input type="text"
+                            class="buy-form-list__input"></label></li>
+                <li class="buy-form-list__item"><label class="buy-form-list__label">E-mail<input type="email"
+                            class="buy-form-list__input"></label></li>
+            </ul>
+        </form>
+        <ul class="buy-modal-list">
+            <li class="buy-modal-list__item">
+                <details class="buy-modal-list__details">
+                    <summary class="buy-modal-list__head">IceCream</summary>
+                    <ul class="buy-product">
+                        <li class="buy-product__item">Strawberry</li>
+                        <li class="buy-product__item">Chokolate</li>
+                        <li class="buy-product__item">Vanile</li>
+                        <li class="buy-product__item">Lemon</li>
+                        <li class="buy-product__item">Orange</li>
+                    </ul>
+                </details>
+            </li>
+            <li class="buy-modal-list__item">
+                <details class="buy-modal-list__details">
+                    <summary class="buy-modal-list__head">Coffe</summary>
+                    <ul class="buy-product">
+                        <li class="buy-product__item">Latte</li>
+                        <li class="buy-product__item">Americano</li>
+                        <li class="buy-product__item">Espresso</li>
+                        <li class="buy-product__item">Matcha</li>
+                        <li class="buy-product__item">Cappuccino</li>
+                    </ul>
+                </details>
+            </li>
+            <li class="buy-modal-list__item">
+                <details class="buy-modal-list__details">
+                    <summary class="buy-modal-list__head">Milkshakes</summary>
+                    <ul class="buy-product">
+                        <li class="buy-product__item">Chokolate</li>
+                        <li class="buy-product__item">Mint</li>
+                        <li class="buy-product__item">Coconut</li>
+                        <li class="buy-product__item">Raspberry</li>
+                        <li class="buy-product__item">Strawberry</li>
+                    </ul>
+                </details>
+            </li>
+        </ul>
+        <button type="submit" class="buy-modal__btn">buy</button>
+    </div>
+</div>
+
+<script src="./js/modal-mob.js"></script>
+<script src="./js/modal.js"></script>
+<script src="./js/mobile-menu.js"></script>

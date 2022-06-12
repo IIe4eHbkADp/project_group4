@@ -1,0 +1,184 @@
+// header modal
+
+.backdrop,
+.backdrop-mob {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden,
+.backdrop-mob.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.buy-modal {
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $accent-light-color;
+    padding: 30px;
+    text-align: center;
+    align-items: center;
+    overflow: auto;
+
+    @media screen and (min-width: 768px) {
+        width: 400px;
+        height: 600px;
+        padding: 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 500px;
+        height: 700px;
+        padding: 50px;
+    }
+}
+
+.buy-mob-modal {
+    position: absolute;
+    z-index: 100;
+    width: 280px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $accent-light-color;
+    padding: 30px;
+    text-align: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.buy-modal__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+}
+
+.close-btn__icon {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: $main-color;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+
+    &:hover, &:focus {
+        stroke: $accent-color;
+    }
+}
+
+.buy-form {
+    margin-bottom: 15px;
+}
+
+.buy-form-list {}
+
+.buy-form-list__item {
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.buy-form-list__label {
+    font-size: 18px;
+    line-height: 1.5;
+    color: $accent-color;
+}
+
+.buy-form-list__input {
+    margin-top: 5px;
+    border: none;
+    width: 100%;
+    height: 40px;
+    color: $accent-color;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition-property: outline;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+
+    &:hover, &:focus {
+        outline: 1px solid $accent-color;
+    }
+    
+}
+
+.buy-modal-list {
+    text-align: left;
+}
+
+.buy-modal-list__item {
+    &:not(:last-child) {
+        margin-bottom: 7px;
+    }
+}
+
+.buy-modal-list__details {}
+
+.buy-modal-list__head {
+    color: $elipse-color-two;
+    font-size: 13px;
+    line-height: 1.5;
+
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        font-size: 16px;
+    }
+}
+
+.buy-product {}
+
+.buy-product__item {
+    color: $additional-color;
+    font-size: 11px;
+    line-height: 1.5;
+
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        font-size: 16px;
+    }
+}
+
+.buy-modal__btn {
+    margin-top: 15px;
+    border-radius: 20px;
+    padding: 10px 40px;
+    border: 1px solid $accent-color;
+    background-color: transparent;
+    color: $accent-color;
+    transition-property: color, border;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: $main-color;
+        border: 1px solid $main-color;
+    }
+}
