@@ -25,13 +25,18 @@ img {
   max-width: 100%;
 }
 
-.visibility-hidden {
+.visually-hidden {
   position: absolute;
-  visibility: hidden;
+  white-space: nowrap;
   width: 1px;
   height: 1px;
-  margin-bottom: -1px;
-  padding-bottom: 0;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
 }
 
 .container {
@@ -1168,6 +1173,17 @@ img {
   padding-top: 16px;
   padding-bottom: 48px;
 }
+@media screen and (min-width: 768px) {
+  .reviews-dot-container {
+    padding-top: 32px;
+    padding-bottom: 80px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .reviews-dot-container {
+    padding-bottom: 120px;
+  }
+}
 
 /* The dots/bullets/indicators */
 .reviews-dot {
@@ -1178,13 +1194,13 @@ img {
   background-color: #d9d9d9;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0s ease;
 }
 
 /* Add a background color to the active dot/circle */
 .active,
 .reviews-dot:active {
-  height: 10px;
+  height: 12px;
   width: 12px;
   border-radius: 0%;
   background-image: url("/src/images/mobile/customer_reviews/House-icon-2x.png");
@@ -1193,10 +1209,17 @@ img {
   background-color: transparent;
   display: inline-block;
 }
-
-/* TIMETABLE  */
-body {
-  width: 100%;
+@media screen and (min-width: 768px) {
+  .active,
+.reviews-dot:active {
+    height: 10px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .active,
+.reviews-dot:active {
+    height: 12px;
+  }
 }
 
 button {
@@ -1206,26 +1229,6 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
-}
-
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  margin: -1px;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .timetable {
@@ -1565,7 +1568,7 @@ ul {
 }
 
 .footer {
-  max-width: 1600px;
+  max-width: 100%;
   background-color: #fff5f6;
   margin: 0 auto;
 }
@@ -1580,10 +1583,13 @@ ul {
 }
 @media screen and (min-width: 768px) {
   .footer__section {
-    display: flex;
-    flex-wrap: wrap;
+    max-width: 768px;
     flex-direction: row;
-    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__section {
+    max-width: 1280px;
   }
 }
 
@@ -1607,24 +1613,24 @@ ul {
   }
 }
 
-.footer_top-text {
+.footer__top-text {
   display: flex;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 320px) {
-  .footer_top-text {
+  .footer__top-text {
     max-width: 234px;
     margin-bottom: 40px;
   }
 }
 @media screen and (min-width: 768px) {
-  .footer_top-text {
+  .footer__top-text {
     max-width: 340px;
     margin-bottom: 40px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .footer_top-text {
+  .footer__top-text {
     max-width: 500px;
     margin-bottom: 60px;
   }

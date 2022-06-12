@@ -184,6 +184,13 @@
   text-align: center;
   padding-top: 16px;
   padding-bottom: 48px;
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 80px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 120px;
+  }
 }
 
 /* The dots/bullets/indicators */
@@ -195,13 +202,13 @@
   background-color: #d9d9d9;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0s ease;
 }
 
 /* Add a background color to the active dot/circle */
 .active,
 .reviews-dot:active {
-  height: 10px;
+  height: 12px;
   width: 12px;
   border-radius: 0%;
   background-image: url('/src/images/mobile/customer_reviews/House-icon-2x.png');
@@ -209,4 +216,10 @@
   background-repeat: no-repeat;
   background-color: transparent;
   display: inline-block;
+  @media screen and (min-width: 768px) {
+    height: 10px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 12px;
+  }
 }
