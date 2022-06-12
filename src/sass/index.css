@@ -41,6 +41,372 @@ img {
   margin: 0 auto;
 }
 
+
+
+button {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.timetable {
+  background-color: #fff5f6;
+}
+
+.timetable-box {
+  padding-bottom: 48px;
+}
+
+.timetable-list {
+  position: relative;
+  /* top: -327px; */
+  display: grid;
+  gap: 20px;
+}
+
+.timetable-list__element {
+  width: 220px;
+  margin: 0 auto;
+  padding: 40px 32px 40px 32px;
+  background-color: #fff;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  /* font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.8333333333;
+  color: #000; */
+}
+
+.timetable-list__header {
+  display: inline-block;
+  padding: 1px 25px;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background-color: #f0d1a5;
+  color: #fff;
+}
+
+.timetable-week {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.timetable-list__header--color {
+  background-color: #c2e297;
+}
+
+.timetable-list__city {
+  letter-spacing: 0.04em;
+  margin-top: 20px;
+}
+
+.timetable-list__text {
+  margin-top: 10px;
+  line-height: 1.5;
+  color: #907e82;
+}
+
+.timetable-week__day {
+  margin-top: 50px;
+}
+
+.timetable-week__time {
+  color: #ffa5ba;
+}
+
+.timetable-week__day-of {
+  margin-top: 10px;
+}
+
+.timetable-contact {
+  margin-top: 25px;
+}
+
+.timetable-contact__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #907e82;
+}
+
+.timetable-list-button {
+  margin-top: 32px;
+  display: grid;
+  gap: 10px;
+}
+
+.timetable-list-button__element {
+  margin: 0 auto;
+}
+
+.timetable__button {
+  /* padding: 15px 17px; */
+  border-radius: 22px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3125;
+  text-align: center;
+  background-color: #d41342;
+  color: #fff;
+  border: 1px solid transparent;
+  width: 161px;
+  height: 44px;
+  transition: transform 250ms linear, color 250ms linear, background-color 250ms linear;
+}
+
+.timetable__button svg {
+  margin-left: 10px;
+}
+
+.timetable__button:hover,
+.timetable__button:focus {
+  background-color: #fff;
+  color: #d41443;
+}
+
+.timetable__button--color {
+  background-color: #fff;
+  color: #d41443;
+}
+
+.timetable__button--color:hover,
+.timetable__button--color:focus {
+  background-color: #d41443;
+  color: #fff;
+}
+
+.timetable__button:active {
+  transform: scale(0.9);
+}
+
+@media screen and (min-width: 768px) {
+  .timetable-box {
+    padding: 0;
+    padding-bottom: 40px;
+  }
+
+  .timetable-list {
+    /* top: -126px; */
+    display: flex;
+  }
+
+  .timetable-list__header {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.875;
+  }
+
+  .timetable-list__element {
+    width: 100%;
+    padding: 50px 32px 50px 32px;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.64;
+  }
+
+  .timetable-list__city {
+    margin-top: 30px;
+  }
+
+  .timetable-week__day,
+.timetable-contact {
+    margin-top: 32px;
+  }
+
+  .timetable-week {
+    /* padding-bottom: 32px; */
+  }
+
+  .timetable-week__day-of {
+    /* margin-top: 15px; */
+  }
+
+  .timetable-list-button {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .timetable-list-button__element {
+    margin: 0;
+  }
+
+  .timetable__button {
+    /* padding: 15px 28px; */
+  }
+
+  /* .schedule__button svg {
+    margin-left: 14px;
+  } */
+}
+@media screen and (min-width: 1280px) {
+  .timetable-box {
+    padding-bottom: 120px;
+  }
+
+  .timetable-list {
+    /* top: -102px; */
+    gap: 31px;
+  }
+
+  .timetable-list__element {
+    width: 100%;
+    padding: 50px 32px 50px 32px;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.875;
+  }
+
+  .timetable-list__city {
+    /* margin-top: 32px; */
+  }
+
+  .timetable-week__day,
+.timetable-contact {
+    margin-top: 32px;
+  }
+
+  .timetable-list-button {
+    margin-top: 60px;
+  }
+}
+/*------------------ MODAL------------------  */
+.backdrop-timetable {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-timetable.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal-timetable {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 250px;
+  min-height: 400px;
+  background-color: #ffa5ba;
+  border-radius: 24px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  padding: 40px 40px;
+}
+.backdrop.is-hidden .modal-timetable {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+@media screen and (min-width: 1280px) {
+  .modal-timetable {
+    width: 550px;
+    min-height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal-timetable {
+    width: 100%;
+    height: 609px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+}
+
+.button-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background: #d41342;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.button-modal-icon {
+  display: block;
+  text-align: center;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-modal:hover .button-modal-icon {
+  fill: var(--logo-color);
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--secondary-color);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.map {
+  padding: 40 0;
+  text-align: center;
+}
+
+.container-map {
+  max-width: 1000px;
+  margin: 0 auto;
+=======
 .first-page {
   overflow: hidden;
   background-color: #ffb8ca;
@@ -197,7 +563,7 @@ img {
     margin-bottom: 261px;
     font-size: 58px;
     line-height: 1.13;
-=======
+
 
 .about {
   font-family: "DM Sans", sans-serif;
@@ -1804,5 +2170,6 @@ img {
     font-size: 16px;
     line-height: 1.76;
   }
+
 
 }/*# sourceMappingURL=index.css.map */
