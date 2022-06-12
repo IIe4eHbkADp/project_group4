@@ -1,0 +1,121 @@
+.js-open-menu,
+.js-close-menu {
+  border: none;
+  background-color: transparent;
+}
+
+.js-open-menu {
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+    margin-right: 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.open-menu__icon {
+  width: 20px;
+  height: 12px;
+}
+
+.js-menu-container {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $mobile-bgc;
+  padding-top: 58px;
+  overflow-y: scroll;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.js-menu-container.is-open {
+  transform: translateX(0);
+
+  @media screen and (min-width: 768px) {
+    transform: translateX(50%);
+  }
+}
+
+.js-close-menu {
+  position: absolute;
+  left: 216px;
+  top: 20px;
+}
+
+.close-menu__icon {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: $main-color;
+  transition-property: stroke;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+
+  &:hover,
+  &:focus {
+    stroke: $accent-color;
+  }
+}
+
+.mob-btn {
+  display: flex;
+  border-radius: 22px;
+  background-color: $main-color;
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  color: $accent-color;
+  padding: 17px 43px;
+  align-items: center;
+  margin-right: auto;
+  margin-left: 20px;
+  margin-bottom: 19px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-btn-color;
+  }
+}
+
+.mob-btn__icon {
+  width: 5px;
+  height: 8px;
+  margin-left: 14px;
+}
+
+.mob-menu__item {
+  border: 1px solid #e18298;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  padding-left: 20px;
+}
+
+.mob-menu__link {
+  color: $main-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
