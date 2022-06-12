@@ -3,7 +3,7 @@
 .backdrop,
 .backdrop-mob {
     position: fixed;
-    z-index: 100;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -32,7 +32,7 @@
     padding: 30px;
     text-align: center;
     align-items: center;
-    overflow: hidden;
+    overflow: auto;
 
     @media screen and (min-width: 768px) {
         width: 400px;
@@ -59,7 +59,7 @@
     padding: 30px;
     text-align: center;
     align-items: center;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .buy-modal__close-btn {
@@ -72,8 +72,17 @@
 }
 
 .close-btn__icon {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: $main-color;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+
+    &:hover, &:focus {
+        stroke: $accent-color;
+    }
 }
 
 .buy-form {
@@ -102,9 +111,16 @@
     color: $accent-color;
     font-size: 14px;
     line-height: 1.5;
-    padding: 2px 5px;
+    padding: 10px 20px;
     border-radius: 20px;
-    outline: 1px solid $accent-color;
+    transition-property: outline;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+
+    &:hover, &:focus {
+        outline: 1px solid $accent-color;
+    }
+    
 }
 
 .buy-modal-list {
