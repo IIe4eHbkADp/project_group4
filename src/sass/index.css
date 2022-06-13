@@ -1159,6 +1159,8 @@ img {
   width: 100%;
   height: 308px;
   background: hsl(0deg, 0%, 98%);
+  transition-property: transform;
+  transition-duration: 3000ms;
 }
 @media screen and (min-width: 768px) {
   .reviews-area {
@@ -1177,7 +1179,7 @@ img {
 }
 
 .reviews-area:hover .reviews-area__lines::before {
-  transform: scale(1.3) rotateY(180deg);
+  transform: scale(0.4) rotateY(180deg);
 }
 
 .reviews-area__text {
@@ -1246,6 +1248,8 @@ img {
   height: 40px;
   position: absolute;
   background-image: url("/src/images/mobile/customer_reviews/quotes-m1x.png");
+  transition-property: transform;
+  transition-duration: 500ms;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .reviews-area__lines::before {
@@ -1339,6 +1343,57 @@ img {
   position: relative;
 }
 
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 100px 20px 100px 0px;
+  color: rgba(212, 20, 67, 0.1);
+  text-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 10px 10px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition-property: transform;
+  transition-duration: 100ms;
+}
+@media screen and (max-width: 767px) {
+  .prev,
+.next {
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  }
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 10px 0 0 10px;
+  padding: 100px 0px 100px 20px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: transparent;
+  transform: scale(1.8);
+}
+@media screen and (max-width: 767px) {
+  .prev:hover,
+.next:hover {
+    color: rgba(212, 20, 67, 0.1);
+    text-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  }
+}
+
 /* The dot/bullet/indicator container */
 .dot-container {
   text-align: center;
@@ -1366,7 +1421,8 @@ img {
   background-color: #d9d9d9;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0s ease;
+  transition-property: transform;
+  transition-duration: 100ms;
 }
 
 /* Add a background color to the active dot/circle */
