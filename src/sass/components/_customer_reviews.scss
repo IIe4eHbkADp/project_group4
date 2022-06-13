@@ -221,9 +221,9 @@
   user-select: none;
   transition-property: transform;
   transition-duration: 100ms;
-    @media screen and (max-width: 767px) {
-  color: rgba(255, 255, 255, 1);
-  text-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  @media screen and (max-width: 767px) {
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   }
 }
 
@@ -239,10 +239,10 @@
 .prev:hover,
 .next:hover {
   background-color: transparent;
-    transform: scale(1.8);
-        @media screen and (max-width: 767px) {
-  color: rgba(212, 20, 67, 0.1);
-  text-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  transform: scale(1.8);
+  @media screen and (max-width: 767px) {
+    color: rgba(212, 20, 67, 0.1);
+    text-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   }
 }
 
@@ -274,7 +274,6 @@
   transition-duration: 100ms;
 
   transition: background-color 0s ease;
-
 }
 
 /* Add a background color to the active dot/circle */
@@ -284,6 +283,7 @@
   width: 12px;
   border-radius: 0%;
   background-image: url('/src/images/mobile/customer_reviews/House-icon-1x.png');
+}
 
 .reviews-dot:active {
   height: 12px;
@@ -312,4 +312,3 @@
 .dot:hover {
   transform: scale(1.3);
 }
-
