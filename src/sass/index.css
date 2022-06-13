@@ -1240,7 +1240,7 @@ img {
   width: 54px;
   height: 40px;
   position: absolute;
-  background-image: url("./images/mobile/customer_reviews/quotes-m1x.png");
+  background-image: url("/src/images/mobile/customer_reviews/quotes-m1x.png");
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .reviews-area__lines::before {
@@ -1262,7 +1262,7 @@ img {
 }
 @media screen and (min-width: 1280px) {
   .reviews-area__lines::before {
-    background-image: url("./images/mobile/customer_reviews/quotes-m1x.png");
+    background-image: url("/src/images/mobile/customer_reviews/quotes-m1x.png");
     width: 54px;
     top: -32px;
     left: 6px;
