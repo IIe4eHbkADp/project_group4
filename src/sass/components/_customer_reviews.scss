@@ -109,18 +109,34 @@
   width: 54px;
   height: 40px;
   position: absolute;
-  background-image: url('/src/images/mobile/customer_reviews/quotes_m2x.png');
+  background-image: url('./images/mobile/customer_reviews/quotes-m1x.png');
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('/src/images/mobile/customer_reviews/quotes_m2x.png');
+  }
+
   @media screen and (min-width: 768px) {
-    background-image: url('/src/images/tablet/quotes-t2x.png');
+    background-image: url('/src/images/tablet/quotes-t1x.png');
     width: 60px;
     top: -20px;
     left: 8px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('/src/images/tablet/quotes-t2x.png');
+    }
   }
   @media screen and (min-width: 1280px) {
-    background-image: url('/src/images/mobile/customer_reviews/quotes_m2x.png');
+    background-image: url('./images/mobile/customer_reviews/quotes-m1x.png');
     width: 54px;
     top: -32px;
     left: 6px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('/src/images/mobile/customer_reviews/quotes_m2x.png');
+    }
   }
 }
 
@@ -191,20 +207,32 @@
   height: 12px;
   width: 12px;
   margin: 0 7px;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 /* Add a background color to the active dot/circle */
-.active, .dot:active {
+.active,
+.dot:active {
   height: 12px;
   width: 12px;
   border-radius: 0%;
-  background-image: url('/src/images/mobile/customer_reviews/House-icon-2x.png');
-  background-size: contain; 
+  background-image: url('/src/images/mobile/customer_reviews/House-icon-1x.png');
+  background-size: contain;
   background-repeat: no-repeat;
   background-color: transparent;
   display: inline-block;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('/src/images/mobile/customer_reviews/House-icon-2x.png');
+  }
+  @media screen and (min-width: 768px) {
+    height: 10px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 12px;
+  }
 }
