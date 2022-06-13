@@ -256,6 +256,7 @@ img {
 }
 
 .section-product__item {
+  position: relative;
   padding: 160px 0 40px;
   border-radius: 24px;
   margin-bottom: 140px;
@@ -276,21 +277,26 @@ img {
     padding: 165px 0 60px;
   }
 }
-.section-product__item .section-product__subtitle::after {
+
+.section-product__dots {
+  position: relative;
+  bottom: 32px;
+}
+.section-product__dots-first::before, .section-product__dots-second::before, .section-product__dots-third::before {
   content: "";
   position: absolute;
-  top: 66px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  width: 26px;
+  width: 6px;
   height: 6px;
-  background-image: url(../images/desktop/dots.png);
+  border-radius: 50%;
+  background-color: #ffffff;
+  top: 0px;
+  left: calc(50% - 10px);
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .section-product__item .section-product__subtitle::after {
-    background-image: url(../images/desktop/dots-2x.png);
-  }
+.section-product__dots-second::before {
+  left: 50%;
+}
+.section-product__dots-third::before {
+  left: calc(50% + 10px);
 }
 
 .section-product__item-content-wrapper {
@@ -329,8 +335,6 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
-  font-size: 14px;
-  line-height: 1.5;
 }
 @media screen and (min-width: 768px) {
   .section-product__subtext {
@@ -352,6 +356,152 @@ img {
 .section-product__btn:hover {
   opacity: 0.6;
 }
+.section-product__btn:hover + .section-product__additional-body {
+  opacity: 1;
+}
+
+.section-product__additional-body {
+  position: absolute;
+  top: 0;
+  height: 75%;
+  padding: 165px 5px 0 5px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  box-shadow: 0px 2px 5px rgba(189, 157, 109, 0.8274509804);
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 450ms ease-in-out;
+}
+.section-product__additional-body--pink {
+  background-color: #f88ca5;
+}
+.section-product__additional-body--peach {
+  background-color: #e8c086;
+}
+.section-product__additional-body--green {
+  background-color: #acd17b;
+}
+@media screen and (min-width: 768px) {
+  .section-product__additional-body {
+    padding: 118px 5px 0 5px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section-product__additional-body {
+    padding: 160px 35px 0 35px;
+  }
+}
+
+.section-product__additional-subtext {
+  position: relative;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+@media screen and (min-width: 1280px) {
+  .section-product__additional-subtext {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+.section-product__additional-subtext::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  right: 50%;
+  transform: translateX(50%);
+  background-position: center;
+  background-size: cover;
+}
+.section-product__additional-subtext--pink::after {
+  top: 110px;
+  width: 85px;
+  height: 52px;
+  background-image: url(../images/mobile/strawberry-mob.png);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .section-product__additional-subtext--pink::after {
+    background-image: url(../images/mobile/strawberry-mob-2x.png);
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-product__additional-subtext--pink::after {
+    top: 135px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section-product__additional-subtext--pink::after {
+    top: 145px;
+    width: 138px;
+    height: 84px;
+    background-image: url(../images/desktop/strawberry.png);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .section-product__additional-subtext--pink::after {
+    background-image: url(../images/desktop/strawberry-2x.png);
+  }
+}
+.section-product__additional-subtext--peach::after {
+  top: 110px;
+  width: 82px;
+  height: 53px;
+  background-image: url(../images/mobile/coffee-small-mob.png);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .section-product__additional-subtext--peach::after {
+    background-image: url(../images/mobile/coffee-small-mob-2x.png);
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-product__additional-subtext--peach::after {
+    top: 135px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section-product__additional-subtext--peach::after {
+    top: 135px;
+    width: 159px;
+    height: 103px;
+    background-image: url(../images/desktop/coffee-small.png);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .section-product__additional-subtext--peach::after {
+    background-image: url(../images/desktop/coffee-small-2x.png);
+  }
+}
+.section-product__additional-subtext--green::after {
+  top: 110px;
+  width: 84px;
+  height: 53px;
+  background-image: url(../images/mobile/chocolate-mob.png);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .section-product__additional-subtext--green::after {
+    background-image: url(../images/mobile/chocolate-mob-2x.png);
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-product__additional-subtext--green::after {
+    top: 135px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section-product__additional-subtext--green::after {
+    top: 150px;
+    width: 154px;
+    height: 85px;
+    background-image: url(../images/desktop/chocolate.png);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .section-product__additional-subtext--green::after {
+    background-image: url(../images/desktop/chocolate-2x.png);
+  }
+}
 
 .section-product__item--pink {
   background-color: #ffb8ca;
@@ -362,6 +512,7 @@ img {
   bottom: 43px;
   right: 50%;
   transform: translateX(50%);
+  z-index: 1;
   display: inline-block;
   width: 280px;
   height: 280px;
@@ -410,6 +561,7 @@ img {
   bottom: 43px;
   right: 50%;
   transform: translateX(50%);
+  z-index: 1;
   display: inline-block;
   width: 280px;
   height: 280px;
@@ -459,6 +611,7 @@ img {
   bottom: 43px;
   right: 50%;
   transform: translateX(50%);
+  z-index: 1;
   display: inline-block;
   width: 280px;
   height: 280px;
@@ -1868,7 +2021,7 @@ button {
 
 .js-menu-container {
   position: fixed;
-  z-index: 3;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
@@ -2285,7 +2438,7 @@ button {
 .backdrop,
 .backdrop-mob {
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
