@@ -8,7 +8,14 @@ button {
 }
 
 .timetable {
-  background-color: #fff5f6;
+  position: relative;
+  margin-top: -327px;
+  @media screen and (min-width: 768px) {
+    margin-top: -126px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: -103px;
+  }
 }
 
 .timetable-box {

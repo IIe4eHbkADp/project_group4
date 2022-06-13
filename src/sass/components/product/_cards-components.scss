@@ -26,6 +26,7 @@
 }
 .section-product__subtext {
   margin-bottom: 32px;
+  font-family: $main-font;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.5;
@@ -61,7 +62,7 @@
   padding: 165px 5px 0 5px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  box-shadow: 0px 2px 5px #bd9d6dd3;
+  box-shadow: 0px 2px 5px #b1a697d3;
 
   overflow: hidden;
   opacity: 0;
@@ -86,6 +87,7 @@
 }
 .section-product__additional-subtext {
   position: relative;
+  font-family: $main-font;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.5;
