@@ -135,7 +135,7 @@
 
     &--dark {
         background-color: $accent-color;
-        color: $main-color;
+        
 
         transition-property: background-color;
         transition-duration: 250ms;
@@ -149,7 +149,7 @@
 
     &--light {
         background-color: $main-color;
-        color: $accent-color;
+        
 
         transition-property: background-color;
         transition-duration: 250ms;
@@ -166,6 +166,14 @@
         font-size: 14px;
         line-height: 1.29;
     }
+}
+
+.hero-btn-list__link-light {
+    color: $accent-color;
+}
+
+.hero-btn-list__link-dark {
+    color: $main-color;
 }
 
 
