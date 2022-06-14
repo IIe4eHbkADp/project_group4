@@ -1,4 +1,4 @@
-<section class="timetable" id="timetable">
+<section class="timetable" id="contacts">
   <div class="container">
     <div class="timetable-box">
       <h2 class="contacts__title visually-hidden">Contacts</h2>
@@ -102,11 +102,7 @@
 
       <ul class="timetable-list-button">
         <li class="timetable-list-button__element">
-          <button
-            class="button timetable__button"
-            type="button"
-            data-modal-open
-          >
+          <button class="button timetable__button" type="button" data-modal-op>
             Our Locations
             <svg width="8" height="12">
               <use href="./images/icons.svg#icon-arrow-short-white"></use>
@@ -129,20 +125,33 @@
   </div>
 </section>
 
-<div class="backdrop-timetable is-hidden" data-modal>
+<div class="backdrop-timetable is-hidden" data-mod>
   <div class="modal-timetable">
     <p class="modal-title">
-      2 Rivington St, New York, NY 10002, United States of America
+      125 W <span>Mountain Ave,Fort Collins</span>, CO 80524, United States of
+      America
     </p>
 
-    <button class="button-modal" data-modal-close>
-      <svg class="button-modal-icon" width="11" height="11">
+    <button class="button-modal" data-modal-clos>
+      <!-- <svg class="button-modal-icon" width="11" height="11">
         <use href="./images/icons.svg#icon-Vector-1"></use>
+      </svg> -->
+      <svg class="button-modal-icon">
+        <use href="./images/icons.svg#icon-close"></use>
       </svg>
     </button>
     <div class="map">
       <div class="container-map">
         <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12119.625849114444!2d-105.08993570322401!3d40.58782004480317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87694af54943b837%3A0xd6b4276c408dedd4!2sWalrus%20Ice%20Cream!5e0!3m2!1sru!2sua!4v1655163836491!5m2!1sru!2sua"
+          width="400"
+          height="400"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <!-- <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6047.161061632734!2d-74.00862253022463!3d40.72724979999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259549cf1617d%3A0x85dedf8de6c323a7!2sMorgenstern%E2%80%99s%20Finest%20Ice%20Cream!5e0!3m2!1sru!2sde!4v1654976663900!5m2!1sru!2sde"
           width="250"
           height="250"
@@ -150,9 +159,9 @@
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        ></iframe> -->
       </div>
     </div>
   </div>
 </div>
-<!-- <script src="./js/modal-location.js"></script> -->
+<script src="./js/modal-location.js"></script>

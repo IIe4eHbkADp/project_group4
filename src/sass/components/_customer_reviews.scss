@@ -12,7 +12,9 @@
     padding-left: 16px;
   }
 }
-
+.reviews-section {
+  background-color: $main-color;
+}
 .reviews {
   padding-top: 80px;
   padding-bottom: 32px;
@@ -250,13 +252,16 @@
 .reviews-dot-container {
   text-align: center;
   padding-top: 16px;
-  padding-bottom: 48px;
+  // padding-bottom: 48px;
+  padding-bottom: 375px;
   @media screen and (min-width: 768px) {
     padding-top: 32px;
-    padding-bottom: 80px;
+    // padding-bottom: 80px;
+    padding-bottom: 206px;
   }
   @media screen and (min-width: 1280px) {
     padding-bottom: 120px;
+    padding-bottom: 223px;
   }
 }
 
