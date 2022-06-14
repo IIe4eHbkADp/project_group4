@@ -37,8 +37,6 @@
   width: 100%;
   height: 308px;
   background: hsla(0, 0%, 98%);
-  transition-property: transform;
-  transition-duration: 3000ms;
   @media screen and (min-width: 768px) {
     width: 620px;
     height: 164px;
@@ -53,7 +51,8 @@
 }
 
 .reviews-area:hover .reviews-area__lines::before {
-  transform: scale(0.4) rotateY(180deg);
+  // transform: scale(0.4) rotateY(180deg);
+    transform:rotateZ(1080deg);
 }
 
 .reviews-area__text {
@@ -118,15 +117,15 @@
   width: 54px;
   height: 40px;
   position: absolute;
+  background-repeat: no-repeat;
   background-image: url('/src/images/mobile/customer_reviews/quotes-m1x.png');
-  transition-property: transform;
-  transition-duration: 500ms;
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: url('/src/images/mobile/customer_reviews/quotes_m2x.png');
   }
-
+  transition-property: transform;
+  transition-duration: 450ms;
   @media screen and (min-width: 768px) {
     background-image: url('/src/images/tablet/quotes-t1x.png');
     width: 60px;
@@ -214,18 +213,23 @@
   top: 50%;
   width: auto;
   margin-top: -30px;
-  padding: 100px 20px 100px 0px;
+  padding: 100px 25px 100px 10px;
   color: rgba(212, 20, 67, 0.1);
   text-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   font-weight: bold;
   font-size: 20px;
-  border-radius: 0 10px 10px 0;
   user-select: none;
   transition-property: transform;
-  transition-duration: 100ms;
+  transition-duration: 250ms;
   @media screen and (max-width: 767px) {
     color: rgba(255, 255, 255, 1);
     text-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  }
+  @media screen and (min-width: 768px) {
+    padding: 100px 10px 100px 15px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 100px 40px 100px 40px;
   }
 }
 
@@ -233,8 +237,13 @@
 .next {
   position: absolute;
   right: 0;
-  border-radius: 10px 0 0 10px;
-  padding: 100px 0px 100px 20px;
+  padding: 100px 10px 100px 25px;
+  @media screen and (min-width: 768px) {
+    padding: 100px 15px 100px 10px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 100px 40px 100px 40px;
+  }
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -260,7 +269,7 @@
     padding-bottom: 206px;
   }
   @media screen and (min-width: 1280px) {
-    padding-bottom: 120px;
+    // padding-bottom: 120px;
     padding-bottom: 223px;
   }
 }
@@ -274,46 +283,32 @@
   background-color: #d9d9d9;
   border-radius: 50%;
   display: inline-block;
-
   transition-property: transform;
-  transition-duration: 100ms;
-
-  transition: background-color 0s ease;
+  transition-duration: 250ms;
 }
 
 /* Add a background color to the active dot/circle */
 .active,
-.dot:active {
-  height: 12px;
-  width: 12px;
-  border-radius: 0%;
-  background-image: url('/src/images/mobile/customer_reviews/House-icon-1x.png');
-}
-
 .reviews-dot:active {
-  height: 12px;
-  width: 12px;
+  height: 13px;
+  width: 13px;
   border-radius: 0%;
-  background-image: url('/src/images/mobile/customer_reviews/House-icon-2x.png');
-
+  display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
   background-color: transparent;
-  display: inline-block;
+  background-image: url('/src/images/mobile/customer_reviews/House-icon-1x.png');
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: url('/src/images/mobile/customer_reviews/House-icon-2x.png');
   }
-  @media screen and (min-width: 768px) {
-    width: 13px;
-    height: 10px;
-  }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 14px;
     height: 12px;
   }
 }
 
-.dot:hover {
-  transform: scale(1.3);
+.reviews-dot:hover {
+  transform: scale(1.4);
 }
