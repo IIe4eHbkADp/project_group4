@@ -1,8 +1,8 @@
-.hero-img__container {
+.first-page__img-container {
     position: relative;
 }
 
-.hero__circle {
+.first-page__circle {
     position: absolute;
     left: 38px;
     top: 84px;
@@ -26,7 +26,7 @@
     }
 }
 
-.hero-img__icecream {
+.first-page__icecream {
     position: absolute;
     left: 117px;
     top: 92px;
@@ -104,16 +104,16 @@
     }
 }
 
-.hero-btn-list {
+.hero-nav-menu {
     display: flex;
     margin-top: 20px;
-
+    
     @media screen and (min-width: 1280px) {
         margin-top: 24px;
     }
 }
 
-.hero-btn-list__item {
+.hero-nav-menu__item {
     &:not(:last-child) {
         margin-right: 8px;
     }
@@ -125,57 +125,37 @@
     }
 }
 
-.hero-btn-list__btn {
-    font-family: 'DM Sans';
+.hero-nav-menu__link {
     font-weight: 400;
-    font-size: 8px;
-    line-height: 1.25;
+    font-size: 14px;
+    line-height: 1.29;
+    display: flex;
+    align-items: center;
+    text-align: center;
     border-radius: 20px;
-    padding: 9px 14px;
+    padding: 11px 22px;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
 
     &--dark {
+        color: $main-color;
         background-color: $accent-color;
-        
 
-        transition-property: background-color;
-        transition-duration: 250ms;
-        transition-timing-function: ease-in-out;
-
-        &:hover,
-        &:focus {
+        &:hover, &:focus {
             background-color: $elipse-color-two;
         }
     }
 
     &--light {
+        color: $accent-color;
         background-color: $main-color;
-        
 
-        transition-property: background-color;
-        transition-duration: 250ms;
-        transition-timing-function: ease-in-out;
-
-        &:hover,
-        &:focus {
+        &:hover, &:focus {
             background-color: $hover-btn-color;
         }
     }
-
-    @media screen and (min-width: 1280px) {
-        padding: 11px 23px;
-        font-size: 14px;
-        line-height: 1.29;
-    }
 }
-
-.hero-btn-list__link-light {
-    color: $accent-color;
-}
-
-.hero-btn-list__link-dark {
-    color: $main-color;
-}
-
 
 .hero__text {
     display: none;
@@ -274,7 +254,7 @@
     }
 }
 
-.hero-img__arrow-right {
+.hero__arrow-right {
     display: none;
 
     @media screen and (min-width: 768px) {
@@ -287,7 +267,7 @@
     }
 }
 
-.hero-img__milk {
+.hero__milk {
     display: none;
 
     @media screen and (min-width: 768px) {
@@ -303,7 +283,7 @@
     }
 }
 
-.hero-img__tasty {
+.hero__tasty {
     display: none;
 
     @media screen and (min-width: 768px) {

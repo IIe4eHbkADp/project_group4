@@ -1,8 +1,7 @@
-<header>
   <div class="first-page">
-    <div class="hero-img__container container">
-      <div class="hero__circle"></div>
-      <picture class="hero-img__icecream">
+    <div class="first-page__img-container container">
+      <div class="first-page__circle"></div>
+      <picture class="first-page__icecream">
         <source
           srcset="
             ./images/desktop/icecream-min.png    1x,
@@ -29,10 +28,10 @@
     </div>
 
     <!-- HEADER -->
-
-    <div class="header-container">
-      <a href="index.html" class="logo__link">
-        <picture class="logo">
+    <header class="header">
+    <div class="header__container">
+      <a href="index.html" class="logo">
+        <picture class="logo__pict">
           <source
             srcset="./images/logo-min.png 1x, ./images/logo-2x-min.png 2x"
           />
@@ -40,13 +39,13 @@
         </picture>
       </a>
       <button class="js-open-menu" aria-expanded="false">
-        <svg class="open-menu__icon">
+        <svg class="js-open-menu__icon">
           <use href="./images/icons.svg#icon-Burger"></use>
         </svg>
       </button>
       <div class="js-menu-container">
         <button class="js-close-menu">
-          <svg class="close-menu__icon">
+          <svg class="js-close-menu__icon">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
@@ -93,7 +92,7 @@
       </ul>
       <button class="header__btn" data-modal-open>
         Buy now
-        <svg class="Header_btn__icon">
+        <svg class="header__btn-icon">
           <use href="./images/icons.svg#icon-arrow"></use>
         </svg>
       </button>
@@ -108,27 +107,9 @@
           made with <br />
           <span class="hero__top-text hero__top-text--accent">passion</span>
         </h1>
-        <ul class="hero-btn-list">
-          <li class="hero-btn-list__item">
-            <button
-              type="button"
-              name="#products"
-              class="hero-btn-list__btn hero-btn-list__btn--dark"
-            >
-              <a href="#products" class="hero-btn-list__link-dark"> Products</a>
-            </button>
-          </li>
-          <li class="hero-btn-list__item">
-            <button
-              type="button"
-              name="#about"
-              class="hero-btn-list__btn hero-btn-list__btn--light"
-            >
-              <a href="#about" class="hero-btn-list__link-light">
-                How it’s made?</a
-              >
-            </button>
-          </li>
+        <ul class="hero-nav-menu">
+          <li class="hero-nav-menu__item"><a href="#products" class="hero-nav-menu__link hero-nav-menu__link--dark">Products</a></li>
+          <li class="hero-nav-menu__item"><a href="#about" class="hero-nav-menu__link hero-nav-menu__link--light">How it’s made?</a></li>
         </ul>
         <p class="hero__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -144,8 +125,8 @@
             <p class="hero-number__position">food trucks</p>
           </li>
         </ul>
-        <a href="" class="hero-img__link">
-          <picture class="hero-img__arrow-right">
+        <a href="" class="hero__link-img">
+          <picture class="hero__arrow-right">
             <source
               srcset="
                 ./images/desktop/arrow-min.png    1x,
@@ -163,7 +144,7 @@
             <img src="./images/desktop/arrow-right-min.png" alt="icecream" />
           </picture>
         </a>
-        <picture class="hero-img__milk">
+        <picture class="hero__milk">
           <source
             srcset="
               ./images/desktop/milk-min.png    1x,
@@ -180,7 +161,7 @@
           />
           <img src="./images/desktop/milk-min.png" alt="icecream" />
         </picture>
-        <picture class="hero-img__tasty">
+        <picture class="hero__tasty">
           <source
             srcset="
               ./images/desktop/tasty-min.png    1x,
@@ -206,7 +187,7 @@
   <div class="backdrop is-hidden" data-modal>
     <div class="buy-modal">
       <button class="buy-modal__close-btn" data-modal-close>
-        <svg class="close-btn__icon">
+        <svg class="buy-modal__close-icon">
           <use href="./images/icons.svg#icon-close"></use>
         </svg>
       </button>
@@ -223,46 +204,46 @@
             /></label>
           </li>
         </ul>
+        <ul class="buy-modal-list">
+          <li class="buy-modal-list__item">
+            <label for="taste" class="buy-modal-list__head">IceCream</label>
+            <select id="taste" name="taste" class="buy-modal-list__details">
+              <option value="S" class="buy-modal-list__option">Strawberry</option>
+              <option value="C" class="buy-modal-list__option">Chokolate</option>
+              <option value="V" class="buy-modal-list__option">Vanile</option>
+              <option value="L" class="buy-modal-list__option">Lemon</option>
+              <option value="O" class="buy-modal-list__option">Orange</option>
+              <option value="-" selected class="buy-modal-list__option">none</option>
+            </select>
+          </li>
+          <li class="buy-modal-list__item">
+            <label for="type" class="buy-modal-list__head">Coffe</label>
+            <select id="type" name="type" class="buy-modal-list__details">
+              <option value="l" class="buy-modal-list__option">Latte</option>
+              <option value="a" class="buy-modal-list__option">Americano</option>
+              <option value="e" class="buy-modal-list__option">Espresso</option>
+              <option value="m" class="buy-modal-list__option">Matcha</option>
+              <option value="c" class="buy-modal-list__option">Cappuccino</option>
+              <option value="-" selected class="buy-modal-list__option">none</option>
+            </select>
+          </li>
+          <li class="buy-modal-list__item">
+            <label for="shake" class="buy-modal-list__head">Milkshakes</label>
+            <select id="shake" name="shake" class="buy-modal-list__details">
+              <option value="S" class="buy-modal-list__option">Chokolate</option>
+              <option value="C" class="buy-modal-list__option">Mint</option>
+              <option value="V" class="buy-modal-list__option">Raspberry</option>
+              <option value="L" class="buy-modal-list__option">Coconut</option>
+              <option value="O" class="buy-modal-list__option">Strawberry</option>
+              <option value="-" selected class="buy-modal-list__option">none</option>
+            </select>
+          </li>
+        </ul>
+        <label for="message" class="buy-form__message">Comment</label>
+        <textarea name="message" id="message" cols="30" rows="10" class="buy-form__textarea"
+          placeholder="Please, leave datails of you choice=)"></textarea>
+        <button type="submit" class="buy-form__btn">buy</button>
       </form>
-      <ul class="buy-modal-list">
-        <li class="buy-modal-list__item">
-          <details class="buy-modal-list__details">
-            <summary class="buy-modal-list__head">IceCream</summary>
-            <ul class="buy-product">
-              <li class="buy-product__item">Strawberry</li>
-              <li class="buy-product__item">Chokolate</li>
-              <li class="buy-product__item">Vanile</li>
-              <li class="buy-product__item">Lemon</li>
-              <li class="buy-product__item">Orange</li>
-            </ul>
-          </details>
-        </li>
-        <li class="buy-modal-list__item">
-          <details class="buy-modal-list__details">
-            <summary class="buy-modal-list__head">Coffe</summary>
-            <ul class="buy-product">
-              <li class="buy-product__item">Latte</li>
-              <li class="buy-product__item">Americano</li>
-              <li class="buy-product__item">Espresso</li>
-              <li class="buy-product__item">Matcha</li>
-              <li class="buy-product__item">Cappuccino</li>
-            </ul>
-          </details>
-        </li>
-        <li class="buy-modal-list__item">
-          <details class="buy-modal-list__details">
-            <summary class="buy-modal-list__head">Milkshakes</summary>
-            <ul class="buy-product">
-              <li class="buy-product__item">Chokolate</li>
-              <li class="buy-product__item">Mint</li>
-              <li class="buy-product__item">Coconut</li>
-              <li class="buy-product__item">Raspberry</li>
-              <li class="buy-product__item">Strawberry</li>
-            </ul>
-          </details>
-        </li>
-      </ul>
-      <button type="submit" class="buy-modal__btn">buy</button>
     </div>
   </div>
 </header>
@@ -271,8 +252,8 @@
 
 <div class="backdrop-mob is-hidden" data-mob-modal>
   <div class="buy-mob-modal">
-    <button class="buy-modal__close-btn" data-modal-mob-close>
-      <svg class="close-btn__icon">
+    <button class="buy-mob-modal__close-btn" data-modal-mob-close>
+      <svg class="buy-mob-modal__close-icon">
         <use href="./images/icons.svg#icon-close"></use>
       </svg>
     </button>
@@ -289,46 +270,45 @@
           /></label>
         </li>
       </ul>
+      <ul class="buy-modal-list">
+        <li class="buy-modal-list__item">
+          <label for="taste" class="buy-modal-list__head">IceCream</label>
+          <select id="taste" name="taste" class="buy-modal-list__details">
+            <option value="S" class="buy-modal-list__option">Strawberry</option>
+            <option value="C" class="buy-modal-list__option">Chokolate</option>
+            <option value="V" class="buy-modal-list__option">Vanile</option>
+            <option value="L" class="buy-modal-list__option">Lemon</option>
+            <option value="O" class="buy-modal-list__option">Orange</option>
+            <option value="-" selected class="buy-modal-list__option">none</option>
+          </select>
+        </li>
+        <li class="buy-modal-list__item">
+          <label for="type" class="buy-modal-list__head">Coffe</label>
+          <select id="type" name="type" class="buy-modal-list__details">
+            <option value="l" class="buy-modal-list__option">Latte</option>
+            <option value="a" class="buy-modal-list__option">Americano</option>
+            <option value="e" class="buy-modal-list__option">Espresso</option>
+            <option value="m" class="buy-modal-list__option">Matcha</option>
+            <option value="c" class="buy-modal-list__option">Cappuccino</option>
+            <option value="-" selected class="buy-modal-list__option">none</option>
+          </select>
+        </li>
+        <li class="buy-modal-list__item">
+          <label for="shake" class="buy-modal-list__head">Milkshakes</label>
+          <select id="shake" name="shake" class="buy-modal-list__details">
+            <option value="S" class="buy-modal-list__option">Chokolate</option>
+            <option value="C" class="buy-modal-list__option">Mint</option>
+            <option value="V" class="buy-modal-list__option">Raspberry</option>
+            <option value="L" class="buy-modal-list__option">Coconut</option>
+            <option value="O" class="buy-modal-list__option">Strawberry</option>
+            <option value="-" selected class="buy-modal-list__option">none</option>
+          </select>
+        </li>
+      </ul>
+      <label for="message" class="buy-form__message">Comment</label>
+      <textarea name="message" id="message" cols="30" rows="10" class="buy-form__textarea" placeholder="Please, leave datails of you choice=)"></textarea>
+      <button type="submit" class="buy-form__btn">buy</button>
     </form>
-    <ul class="buy-modal-list">
-      <li class="buy-modal-list__item">
-        <details class="buy-modal-list__details">
-          <summary class="buy-modal-list__head">IceCream</summary>
-          <ul class="buy-product">
-            <li class="buy-product__item">Strawberry</li>
-            <li class="buy-product__item">Chokolate</li>
-            <li class="buy-product__item">Vanile</li>
-            <li class="buy-product__item">Lemon</li>
-            <li class="buy-product__item">Orange</li>
-          </ul>
-        </details>
-      </li>
-      <li class="buy-modal-list__item">
-        <details class="buy-modal-list__details">
-          <summary class="buy-modal-list__head">Coffe</summary>
-          <ul class="buy-product">
-            <li class="buy-product__item">Latte</li>
-            <li class="buy-product__item">Americano</li>
-            <li class="buy-product__item">Espresso</li>
-            <li class="buy-product__item">Matcha</li>
-            <li class="buy-product__item">Cappuccino</li>
-          </ul>
-        </details>
-      </li>
-      <li class="buy-modal-list__item">
-        <details class="buy-modal-list__details">
-          <summary class="buy-modal-list__head">Milkshakes</summary>
-          <ul class="buy-product">
-            <li class="buy-product__item">Chokolate</li>
-            <li class="buy-product__item">Mint</li>
-            <li class="buy-product__item">Coconut</li>
-            <li class="buy-product__item">Raspberry</li>
-            <li class="buy-product__item">Strawberry</li>
-          </ul>
-        </details>
-      </li>
-    </ul>
-    <button type="submit" class="buy-modal__btn">buy</button>
   </div>
 </div>
 

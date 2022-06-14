@@ -62,7 +62,8 @@
   overflow: auto;
 }
 
-.buy-modal__close-btn {
+.buy-modal__close-btn,
+.buy-mob-modal__close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -71,7 +72,8 @@
   border-radius: 10px;
 }
 
-.close-btn__icon {
+.buy-modal__close-icon,
+.buy-mob-modal__close-icon {
   width: 20px;
   height: 20px;
   fill: none;
@@ -124,6 +126,8 @@
 
 .buy-modal-list {
   text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .buy-modal-list__item {
@@ -146,7 +150,16 @@
   }
 }
 
-.buy-product__item {
+.buy-modal-list__details {
+  outline: 1px solid $accent-color;
+  width: 100%;
+  background-color: transparent;
+  margin-top: 7px;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.buy-modal-list__option {
   color: $additional-color;
   font-size: 11px;
   line-height: 1.5;
@@ -160,7 +173,7 @@
   }
 }
 
-.buy-modal__btn {
+.buy-form__btn {
   margin-top: 15px;
   border-radius: 20px;
   padding: 10px 40px;
@@ -175,5 +188,26 @@
   &:focus {
     color: $main-color;
     border: 1px solid $main-color;
+  }
+}
+
+.buy-form__message {
+  font-size: 18px;
+  line-height: 1.5;
+  color: $accent-color;
+}
+.buy-form__textarea {
+  resize: none;
+  width: 100%;
+  height: 200px;
+  border: 1px solid $accent-color;
+  outline: 1px solid $elipse-color-two;
+  padding: 8px;
+  color: $accent-color;
+  background-color: transparent;
+  border-radius: 20px;
+
+  &::placeholder {
+    color: $additional-color;
   }
 }
