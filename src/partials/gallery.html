@@ -1,9 +1,9 @@
 <section class="gallery">
   <h2 class="visibility-hidden">Gallery</h2>
-  <div class="gallery-list container">
-    <div class="gallery-block">
+  <div class="gallery__list container">
+    <div class="gallery__block">
       <div class="picture animate__animated animate__zoomIn">
-        <picture class="photo photo__left">
+        <picture class="photo photo--left">
           <source
             srcset="
               ./images/gallery/gallery-1.png    1x,
@@ -63,7 +63,12 @@
             media="(min-width: 320px)"
             type="image/png"
           />
-          <img src="./images/gallery/gallery-2.png" alt="" width="180" />
+          <img
+            class="gallery__img"
+            src="./images/gallery/gallery-2.png"
+            alt=""
+            width="180"
+          />
         </picture>
       </div>
       <div class="picture animate__animated animate__zoomIn">
@@ -123,7 +128,12 @@
             media="(min-width: 320px)"
             type="image/png"
           />
-          <img src="./images/gallery/gallery-4.png" alt="" width="320" />
+          <img
+            class="gallery__img--big-photo"
+            src="./images/gallery/gallery-4.png"
+            alt=""
+            width="320"
+          />
         </picture>
       </div>
 
@@ -154,7 +164,12 @@
               media="(min-width: 320px)"
               type="image/png"
             />
-            <img src="./images/gallery/gallery-5.png" alt="" width="180" />
+            <img
+              class="gallery__img--girl"
+              src="./images/gallery/gallery-5.png"
+              alt=""
+              width="180"
+            />
           </picture>
         </div>
       </div>
@@ -186,7 +201,12 @@
             media="(min-width: 320px)"
             type="image/png"
           />
-          <img src="./images/gallery/gallery-6.png" alt="" width="180" />
+          <img
+            class="gallery__img-salet"
+            src="./images/gallery/gallery-6.png"
+            alt=""
+            width="180"
+          />
         </picture>
       </div>
       <div class="picture animate__animated animate__zoomIn">
@@ -280,7 +300,7 @@
       </div>
     </div>
     <div class="picture animate__animated animate__zoomIn">
-      <picture class="photo photo__right">
+      <picture class="photo photo--right">
         <source
           srcset="
             ./images/gallery/gallery-10.png    1x,

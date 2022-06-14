@@ -7,7 +7,7 @@ button {
   cursor: pointer;
 }
 
-.timetable {
+.contacts {
   position: relative;
   margin-top: -327px;
   @media screen and (min-width: 768px) {
@@ -109,7 +109,7 @@ button {
   margin: 0 auto;
 }
 
-.timetable__button {
+.button--timetable {
   /* padding: 15px 17px; */
   border-radius: 22px;
   font-family: 'DM Sans';
@@ -128,22 +128,22 @@ button {
     background-color 250ms linear;
 }
 
-.timetable__button svg {
+.button--timetable svg {
   margin-left: 10px;
 }
-.timetable__button:hover,
-.timetable__button:focus {
+.button--timetable:hover,
+.button--timetable:focus {
   background-color: #c7133e;
 }
-.timetable__button--color {
+.timetable--button_color {
   background-color: #fff;
   color: #d41443;
 }
-.timetable__button--color:hover,
-.timetable__button--color:focus {
+.button--timetable_color:hover,
+.button--timetable_color:focus {
   background-color: #ecebeb;
 }
-.timetable__button:active {
+.button--timetable:active {
   transform: scale(0.9);
 }
 

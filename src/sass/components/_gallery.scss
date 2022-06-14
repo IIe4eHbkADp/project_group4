@@ -6,14 +6,16 @@
   @media screen and (min-width: 768px) {
     padding-right: 32px;
     padding-left: 32px;
+    max-width: 1280px;
   }
   @media screen and (min-width: 1280px) {
     padding-right: 16px;
     padding-left: 16px;
+    max-width: 1600px;
   }
 }
 
-.gallery-list {
+.gallery__list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,20 +32,12 @@
   }
 }
 
-
-// .picture {
-//   display: block;
-//   transform: scale(0.9);
-
-//   @media screen and (min-width: 320px) {
-//     min-width: 100%;
-//   }
-
-//   @media screen and (max-width: 768px) {
-//     max-width: 100%;
-//   }
-// }
-
+.gallery__img {
+  padding-bottom: 2px;
+}
+.gallery__img-salet {
+  padding-left: 4px;
+}
 .picture {
   position: relative;
   overflow: none;
@@ -57,44 +51,44 @@
 .photo {
   position: relative;
   display: inline-block;
-  transition-property: transform;
+  transition-property: transform, scale;
   transition-duration: 350ms;
 }
 
 .photo:hover,
 .photo:focus {
-  transform: scale(1.9);
+  transform: scale(1.25);
 }
 
-.photo__left {
-  transition-property: transform;
+.photo--left {
+  transition-property: transform, scale;
   transition-duration: 350ms;
 }
 
-.photo__left:hover,
-.photo__left:focus {
-  transform: translate(5px) scale(1.9);
+.photo--left:hover,
+.photo--left:focus {
+  transform: translate(5px) scale(1.25);
   @media screen and (min-width: 768px) {
-    transform: translate(20px) scale(1.9);
+    transform: translate(20px) scale(1.25);
   }
   @media screen and (min-width: 1280px) {
-    transform: translate(70px) scale(1.9);
+    transform: translate(70px) scale(1.25);
   }
 }
 
-.photo__right {
-  transition-property: transform;
+.photo--right {
+  transition-property: transform, scale;
   transition-duration: 350ms;
 }
 
-.photo__right:hover,
-.photo__right:focus {
-  transform: translate(-5px) scale(1.9);
+.photo--right:hover,
+.photo--right:focus {
+  transform: translate(-5px) scale(1.25);
   @media screen and (min-width: 768px) {
-    transform: translate(-20px) scale(1.9);
+    transform: translate(-20px) scale(1.25);
   }
   @media screen and (min-width: 1280px) {
-    transform: translate(-70px) scale(1.9);
+    transform: translate(-70px) scale(1.25);
   }
 }
 
@@ -120,31 +114,16 @@
   max-width: 50%;
 }
 
-.gallery-block {
+.gallery__block {
   width: auto;
 }
 
-// .photo {
-//   width: 100px;
-//   height: 100px;
-
-//   @media screen and (min-width: 320px) {
-//     width: 25px;
-//     height: 25px;
-//   }
-
-//   @media screen and (max-width: 768px) {
-//     width: 50px;
-//     height: 50px;
-//   }
-
-//   @media screen and (max-width: 1280px) {
-//     width: 100%;
-//     height: 100%;
-//   }
-// }
 .bigger-photo {
   width: 280px;
   height: 280px;
   margin-right: 5px;
+}
+.gallery__img--big-photo,
+.gallery__img--girl {
+  padding-left: 5px;
 }
