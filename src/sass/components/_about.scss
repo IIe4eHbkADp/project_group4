@@ -124,6 +124,7 @@
 }
 
 .about-text {
+    position: relative;
     width: 220px;
 
     @media screen and (min-width: 768px) {
@@ -203,8 +204,49 @@
         font-size: 16px;
         line-height: 1.31;
     }
+
+    &:hover + .about-text__wrap {
+        opacity: 1;
+    }
 }
 
 .btn-text {
     margin-right: 13px;
+}
+
+.about-text__wrap {
+    position: absolute;
+    top: 0;
+    height: 85%;
+    padding: 20px 20px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 450ms ease-in-out;
+    background-color: $mobile-bgc;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px #bd9d6dd3;
+
+    @media screen and (min-width: 768px) {
+        padding: 30px 20px;
+        height: 80%;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding: 40px 20px;
+        height: 75%;
+    }
+}
+
+.about-text__subtext {
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
+    color: $main-color;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+        line-height: 1.31;
+    }
 }
