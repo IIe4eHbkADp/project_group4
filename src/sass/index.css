@@ -1165,6 +1165,25 @@ body {
   }
 }
 
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
 .gallery-list {
   display: flex;
   justify-content: center;
@@ -1184,13 +1203,84 @@ body {
   }
 }
 
+.picture {
+  position: relative;
+  overflow: none;
+}
+
 .picture:hover,
 .picture:focus {
-  transform: scale(1.2);
   z-index: 1;
-  transition-property: scale;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.photo {
+  position: relative;
+  display: inline-block;
+  transition-property: transform;
+  transition-duration: 350ms;
+}
+
+.photo:hover,
+.photo:focus {
+  transform: scale(1.9);
+}
+
+.photo__left {
+  transition-property: transform;
+  transition-duration: 350ms;
+}
+
+.photo__left:hover,
+.photo__left:focus {
+  transform: translate(5px) scale(1.9);
+}
+@media screen and (min-width: 768px) {
+  .photo__left:hover,
+.photo__left:focus {
+    transform: translate(20px) scale(1.9);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photo__left:hover,
+.photo__left:focus {
+    transform: translate(70px) scale(1.9);
+  }
+}
+
+.photo__right {
+  transition-property: transform;
+  transition-duration: 350ms;
+}
+
+.photo__right:hover,
+.photo__right:focus {
+  transform: translate(-5px) scale(1.9);
+}
+@media screen and (min-width: 768px) {
+  .photo__right:hover,
+.photo__right:focus {
+    transform: translate(-20px) scale(1.9);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photo__right:hover,
+.photo__right:focus {
+    transform: translate(-70px) scale(1.9);
+  }
+}
+
+.photo-girl {
+  width: 47px;
+}
+@media screen and (min-width: 768px) {
+  .photo-girl {
+    width: 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photo-girl {
+    width: 250px;
+  }
 }
 
 .picture + .picture {
