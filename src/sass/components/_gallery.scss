@@ -1,17 +1,21 @@
-.container {
-  width: 100%;
+.gallery {
+  background-image: linear-gradient(to bottom, #fff5f6 45%, #fff 45%);
+}
+
+.gallery .container {
+  max-width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin: 0 auto;
   @media screen and (min-width: 768px) {
     padding-right: 32px;
     padding-left: 32px;
-    max-width: 1280px;
+    max-width: 768px;
   }
   @media screen and (min-width: 1280px) {
     padding-right: 16px;
     padding-left: 16px;
-    max-width: 1600px;
+    max-width: 1280px;
   }
 }
 
@@ -20,16 +24,29 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-height: 430px;
+  max-height: 485px;
+}
 
-  background-image: linear-gradient(to bottom, #fff5f6 45%, #fff 45%);
+// .gallery__block {
+//   width: auto;
+// }
 
-  @media screen and (min-width: 320px) {
-    min-width: 320px;
-  }
-  @media screen and (max-width: 768px) {
-    max-width: 768px;
-  }
+.gallery-block-fourth-column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+.gallery-block-fifth-column {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4%;
+}
+
+.gallery-block-sixth-column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
 }
 
 .gallery__img {
@@ -38,6 +55,7 @@
 .gallery__img-salet {
   padding-left: 4px;
 }
+
 .picture {
   position: relative;
   overflow: none;
@@ -93,9 +111,10 @@
 }
 
 .photo-girl {
-  width: 47px;
+  min-width: 47px;
+  margin-right: 40%;
   @media screen and (min-width: 768px) {
-    width: 100px;
+    width: 105px;
   }
   @media screen and (min-width: 1280px) {
     width: 250px;
@@ -112,10 +131,6 @@
 
 .picture:nth-child(5) {
   max-width: 50%;
-}
-
-.gallery__block {
-  width: auto;
 }
 
 .bigger-photo {
