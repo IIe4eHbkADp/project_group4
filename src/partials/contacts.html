@@ -102,7 +102,11 @@
 
       <ul class="timetable-list-button">
         <li class="timetable-list-button__element">
-          <button class="button button--timetable" type="button" data-modal-op>
+          <button
+            class="button button--timetable button--timetable_dark"
+            type="button"
+            data-modal-op
+          >
             Our Locations
             <svg width="8" height="12">
               <use href="./images/icons.svg#icon-arrow-short-white"></use>
@@ -111,8 +115,9 @@
         </li>
         <li class="timetable-list-button__element">
           <button
-            class="button button--timetable button--timetable_color"
+            class="button button--timetable button--timetable_light"
             type="button"
+            data-modal-oppening
           >
             Franchise
             <svg width="8" height="12">
@@ -151,17 +156,61 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
-        <!-- <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6047.161061632734!2d-74.00862253022463!3d40.72724979999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259549cf1617d%3A0x85dedf8de6c323a7!2sMorgenstern%E2%80%99s%20Finest%20Ice%20Cream!5e0!3m2!1sru!2sde!4v1654976663900!5m2!1sru!2sde"
-          width="250"
-          height="250"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe> -->
       </div>
     </div>
   </div>
 </div>
-<script src="./js/modal-location.js"></script>
+<div class="backdrop-timetable is-hidden" data-moddaling>
+  <div class="modal-timetable modal-timetable--franchiza">
+    <p class="modal-title">
+      Lorem ipsum <span>Dicta impedit aut </span> dolor sit
+    </p>
+    <button class="button-modal" data-modal-clossing>
+      <svg class="button-modal-icon">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <div class="map map--franchiza">
+      <div class="container-map modal-franchiza">
+        <ul class="modal-franchiza__list">
+          <li class="modal-franchiza__item">
+            <p class="modal-franchiza__text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta
+            </p>
+          </li>
+          <li class="modal-franchiza__item">
+            <p class="modal-franchiza__text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta
+            </p>
+          </li>
+        </ul>
+        <ul class="modal-franchiza__numbers">
+          <li class="modal-franchiza__numbers-item">
+            <p class="modal-franchiza__numbers-text">92 &#37;</p>
+          </li>
+          <li class="modal-franchiza__numbers-item">
+            <p class="modal-franchiza__numbers-text">85 &#37;</p>
+          </li>
+          <li class="modal-franchiza__numbers-item">
+            <p class="modal-franchiza__numbers-text">97 &#37;</p>
+          </li>
+        </ul>
+        <form class="modal-franchiza__form">
+          <label for="email" class="modal-franchiza__label"
+            >Subscribe For Latest News</label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email"
+            class="modal-franchiza__input"
+          />
+          <button type="submit" class="modal-franchiza__btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./js/modal-location.js"></script>
+  <script src="./js/modal-franchiza.js"></script>
+</div>
